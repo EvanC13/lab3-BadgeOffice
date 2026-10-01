@@ -1,4 +1,6 @@
-﻿Random rng = new Random();
+﻿using System.Diagnostics.CodeAnalysis;
+
+Random rng = new Random();
 
 //Part 1 Input
 System.Console.WriteLine("What is your full name? ");
@@ -30,3 +32,28 @@ double lockerNumber = rng.Next(1, 501);
 
 System.Console.WriteLine("Student ID: " + studentID);
 System.Console.WriteLine("Locker: " + lockerNumber);
+
+//Part 3 Input (dorm)
+System.Console.WriteLine("What is the X value of your dorm? ");
+double dormX = Convert.ToDouble(Console.ReadLine());
+System.Console.WriteLine("What is the Y value of your dorm? ");
+double dormY = Convert.ToDouble(Console.ReadLine());
+
+//Part 3 Input (class)
+System.Console.WriteLine("What is the X value of your class? ");
+double classX = Convert.ToDouble(Console.ReadLine());
+System.Console.WriteLine("What is the Y value of your class? ");
+double classY = Convert.ToDouble(Console.ReadLine());
+
+//Distance formula
+double parenthesisOne = classX - dormX;
+double halfOne = Math.Pow(parenthesisOne,2);
+
+double parenthesisTwo = classY - dormY;
+double halfTwo = Math.Pow(parenthesisTwo, 2);
+
+double halvesAdded = halfOne + halfTwo;
+//Need to format this as one decimal point
+double finalDistance = Math.Sqrt(halvesAdded);
+
+System.Console.WriteLine("Distance: ");
