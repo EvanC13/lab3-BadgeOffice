@@ -24,3 +24,9 @@ System.Console.WriteLine("Initials: " + firstInitial.ToUpper() + "." + lastIniti
 System.Console.WriteLine("Letters in last name: " + lengthOfLast);
 System.Console.WriteLine(" ");
 
+//Part 2
+double studentID = rng.Next(100000, 1000000);
+double lockerNumber = rng.Next(1, 501);
+
+System.Console.WriteLine("Student ID: " + studentID);
+System.Console.WriteLine("Locker: " + lockerNumber);
